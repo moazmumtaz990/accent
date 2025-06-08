@@ -1,29 +1,37 @@
 # 🎙️ Accent Detection and Audio Analysis from YouTube & Uploaded Files
 
-This project enables automated audio transcription and accent classification from audio or video inputs. Built with Streamlit for interactivity, Whisper for transcription, and a fine-tuned Hugging Face model for accent detection, the application supports both direct file uploads and YouTube URLs.
+A powerful Streamlit-based application for extracting audio from uploaded files or YouTube URLs, transcribing speech using Whisper, and classifying English accents using a transformer-based classifier.
 
 ---
 
 ## 🚀 Features
 
-- 📥 **Flexible Input Options**  
-  - Upload local audio/video files (`.mp3`, `.wav`, `.m4a`, `.mp4`)
-  - Paste YouTube links to extract and analyze audio automatically
+- 📥 **Dual Input Modes**  
+  - Upload audio/video files (`.mp3`, `.wav`, `.m4a`, `.mp4`)  
+  - Paste YouTube URLs for automatic download and analysis
 
-- 🧠 **AI-Powered Transcription**  
-  - Uses OpenAI's [Whisper](https://github.com/openai/whisper) for accurate multilingual transcription  
-  - Displays detected language and transcript in real time
+- 🧠 **Speech-to-Text via Whisper**  
+  - High-quality transcription using [OpenAI Whisper](https://github.com/openai/whisper)  
+  - Multilingual support with accurate language detection
 
-- 🌍 **Accent Classification**  
-  - English accent classification using a Hugging Face model (`dima806/english_accents_classification`)  
-  - Predicts accent and visualizes confidence scores via Plotly bar charts
+- 🌍 **Accent Detection**  
+  - Uses `dima806/english_accents_classification` model from Hugging Face  
+  - Predicts and visualizes English accents with confidence scores
 
-- 🎧 **Streamlined Audio Extraction**  
-  - Automatic audio extraction using `yt_dlp` and `moviepy`  
-  - Supports conversion from video to `.wav` or `.mp3`
+- 📊 **Interactive Visualization**  
+  - Clean and intuitive UI using Streamlit  
+  - Dynamic Plotly charts for accent prediction results
 
-- ⚡ **Interactive Web Interface**  
-  - Built using Streamlit with modern UI/UX best practices
+---
+
+## ⚡ Performance Considerations
+
+> ✅ **Recommended for Local Use:**  
+- **[Groq](https://groq.com/)** or **OpenAI Whisper (via local models)** are recommended for fast, cost-effective, and scalable transcription on personal devices.  
+- **Local inference with Whisper** ensures data privacy and works well for non-streaming applications.
+
+> 🌐 **Cloud-First or Streaming Use:**  
+- **Google Gemini Audio Input** offers superior real-time performance in multi-speaker scenarios and conversational audio. Ideal for production-grade pipelines involving rich multimodal context or conversational nuance.
 
 ---
 
